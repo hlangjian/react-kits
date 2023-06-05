@@ -1,5 +1,5 @@
 import { Config } from "tailwindcss";
-import plugin from "./src/stable/plugins/tailwindcss.plugin.template";
+import plugin from "./src/plugins/tailwindcss.plugin.template";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],

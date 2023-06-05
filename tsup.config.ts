@@ -3,9 +3,16 @@ import { defineConfig } from "tsup";
 export default defineConfig([
   {
     clean: true,
-    entry: ["src/**/!(*.stories|*.template|*.generator).(js|jsx|ts|tsx)"],
+    entry: ["src/index.ts"],
     dts: true,
-    outDir: "dist",
+    outDir: "dist/base",
+    format: ["esm", "cjs"],
+  },
+  {
+    clean: true,
+    entry: ["src/tailwindcss.ts"],
+    dts: true,
+    outDir: "dist/tailwindcss",
     format: ["esm", "cjs"],
   },
 ]);

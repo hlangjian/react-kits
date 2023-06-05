@@ -1,7 +1,7 @@
 import React from "react";
 import { VariantProps, variants } from "@/utils/variants";
 
-const buttonVariants = variants({
+export const buttonVariants = variants({
   base: "btn",
   variants: {
     variant: {
