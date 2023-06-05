@@ -1,0 +1,23 @@
+.btn {
+  @apply tone-primary p-2 outline-none border-none rounded transition duration-150 ease-in-out;
+}
+
+.btn-contained {
+  @apply bg-tone-600 text-tone-50 shadow-md shadow-tone-300 active:shadow;
+}
+
+.btn-outlined {
+  @apply bg-transparent text-tone-500 shadow-md shadow-tone-300 active:shadow ring-1 ring-tone-500;
+}
+
+.btn-ghost {
+  @apply bg-transparent text-tone-500 active:bg-tone-100;
+}
+
+.btn-normal {
+  @apply text-base py-2 px-4;
+}
+
+.btn-small {
+  @apply text-sm py-1 px-3;
+}
