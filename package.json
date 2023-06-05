@@ -1,7 +1,7 @@
 {
-  "name": "julong-react-kits",
+  "name": "react-kits",
   "version": "0.0.1",
-  "description": "React toolkits for Julong company",
+  "description": "My React toolkits used in company",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "author": "julong",
+  "author": "joyfour",
   "license": "MIT",
   "peerDependencies": {
     "chroma-js": "^2.4.2",
