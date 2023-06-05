@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm buildPlugin && tsup",
-    "buildPlugin": "tsx src/stable/plugins/tailwindcss.plugin.generator.ts",
+    "buildPlugin": "tsx src/plugins/tailwindcss.plugin.generator.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -22,7 +22,6 @@
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
-    "@esbuild-kit/esm-loader": "^2.5.5",
     "@storybook/addon-essentials": "7.0.18",
     "@storybook/addon-interactions": "7.0.18",
     "@storybook/addon-links": "7.0.18",

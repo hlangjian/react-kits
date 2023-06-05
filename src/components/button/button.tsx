@@ -1,5 +1,5 @@
 import React from "react";
-import { VariantProps, variants } from "@/stable/utils/variants";
+import { VariantProps, variants } from "@/utils/variants";
 
 const buttonVariants = variants({
   base: "btn",
