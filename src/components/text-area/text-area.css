@@ -1,0 +1,13 @@
+.text-area {
+    @apply outline-none w-full rounded focus-visible:ring-2 focus-visible:ring-primary-500;
+    @apply ring-1 ring-neutral-500 p-4 bg-transparent;
+    scrollbar-gutter: stable both-edges;
+}
+
+.text-area::-webkit-scrollbar {
+    display: none;
+}
+
+.text-area::placeholder {
+    @apply text-neutral-400;
+}

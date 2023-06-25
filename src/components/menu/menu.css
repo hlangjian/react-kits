@@ -1,0 +1,20 @@
+.menu {
+    @apply flex flex-col items-start justify-center p-2 rounded;
+    @apply flex-1 gap-1 shadow-lg ring-1 ring-primary-400;
+}
+
+.menu-item {
+    @apply cursor-pointer p-2 rounded w-full flex flex-row gap-2 text-neutral-500 select-none;
+}
+
+.menu-item:hover {
+    @apply tone-primary text-tone-50 bg-tone-500;
+}
+
+.menu-item-icon {
+    @apply w-6 h-6;
+}
+
+.menu-item[aria-disabled="true"]{
+    @apply tone-neutral bg-tone-200 pointer-events-none cursor-not-allowed;
+}

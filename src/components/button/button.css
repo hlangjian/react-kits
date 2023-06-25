@@ -1,17 +1,40 @@
 .btn {
-  @apply tone-primary p-2 outline-none border-none rounded transition duration-150 ease-in-out;
+  @apply tone-primary outline-none border-none rounded-md transition-all duration-200 ease-in-out select-none;
+  @apply relative flex overflow-hidden items-center justify-center;
 }
 
+/* 
+  Contained 实体按钮, 拥有更突出的立体效果和填充效果
+  表示高度强调和主要功能, 交互效果也更加明显
+*/
 .btn-contained {
-  @apply bg-tone-600 text-tone-50 shadow-md shadow-tone-300 active:shadow;
+  @apply bg-tone-700 text-tone-50;
 }
 
+.btn-contained:active {
+  @apply bg-tone-800;
+}
+
+/*
+  Outlined 描边按钮, 拥有中等的强调效果, 因此其立体感与填充感都应弱于Contained按钮
+  用于一般强调, 非主要功能的按钮
+*/
 .btn-outlined {
-  @apply bg-transparent text-tone-500 shadow-md shadow-tone-300 active:shadow ring-1 ring-tone-500;
+  @apply bg-transparent text-tone-600 ring-1 ring-tone-600;
 }
 
+.btn-outlined:active {
+  @apply bg-tone-300;
+}
+
+/*
+  Ghost 幽灵按钮, 拥有较弱的强调感, 容易与背景协调
+  幽灵按钮虽然交互感较弱, 但亦应该有最基本的特征体现其交互性
+  例如, 可以保留基本的hover\active效果
+  一般用于导航之类无需刻意强调, 又不能喧宾夺主的交互组件中
+*/
 .btn-ghost {
-  @apply bg-transparent text-tone-500 active:bg-tone-100;
+  @apply bg-transparent text-tone-600 hover:bg-tone-100 active:bg-tone-300;
 }
 
 .btn-normal {
@@ -20,4 +43,15 @@
 
 .btn-small {
   @apply text-sm py-1 px-3;
+}
+
+/*
+  Link 按钮, 用于导航和引用, 不需要过多的强调
+*/
+.btn-link {
+  @apply text-neutral-500 hover:text-primary-500;
+}
+
+.btn:disabled {
+  @apply pointer-events-none cursor-not-allowed tone-neutral;
 }

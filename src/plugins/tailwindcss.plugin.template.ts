@@ -46,6 +46,36 @@ export default plugin(
       { values: _colors }
     );
 
+    matchUtilities(
+      {
+        "tone-level": (value) => {
+          const num = Number(value);
+          const dark = num + 1 === 10 ? 950 : (num + 1) * 100;
+          const light = num - 1 === 0 ? 50 : (num - 1) * 100;
+          const main = num * 100;
+
+          return {
+            "--tone-main": `var(--tone-${main})`,
+            "--tone-light": `var(--tone-${light})`,
+            "--tone-dark": `var(--tone-${dark})`,
+          };
+        },
+      },
+      {
+        values: {
+          1: "1",
+          2: "2",
+          3: "3",
+          4: "4",
+          5: "5",
+          6: "6",
+          7: "7",
+          8: "8",
+          9: "9",
+        },
+      }
+    );
+
     /* addComponents Placeholder */
   },
   {
@@ -80,6 +110,9 @@ export default plugin(
             "800": "rgb(var(--tone-800) / <alpha-value>)",
             "900": "rgb(var(--tone-900) / <alpha-value>)",
             "950": "rgb(var(--tone-950) / <alpha-value>)",
+            DEFAULT: "rgb(var(--tone-main) / <alpha-value>)",
+            light: "rgb(var(--tone-light) / <alpha-value>)",
+            dark: "rgb(var(--tone-dark) / <alpha-value>)",
           },
         },
       },

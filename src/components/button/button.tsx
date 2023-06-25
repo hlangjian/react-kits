@@ -8,9 +8,10 @@ export const buttonVariants = variants({
       contained: "btn-contained",
       outlined: "btn-outlined",
       ghost: "btn-ghost",
+      link: "btn-link",
     },
     size: {
-      normal: "btn-nromal",
+      normal: "btn-normal",
       small: "btn-small",
     },
   },
@@ -20,17 +21,23 @@ export const buttonVariants = variants({
   },
 });
 
-export type ButtonProps = VariantProps<typeof buttonVariants> &
-  React.ButtonHTMLAttributes<HTMLButtonElement>;
+// export type ButtonProps = VariantProps<typeof buttonVariants> &
+//   React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export interface ButtonProps
+  extends VariantProps<typeof buttonVariants>,
+    React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, className, ...props }, ref) => {
+  ({ variant, size, className, children, ...props }, ref) => {
     return (
       <button
         className={buttonVariants({ variant, size, className })}
         {...props}
         ref={ref}
-      />
+      >
+        {children}
+      </button>
     );
   }
 );
